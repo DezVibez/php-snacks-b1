@@ -45,7 +45,7 @@ $matchs = [
 
         <div>     
             <?= 
-                $matchs[$i]['Squadra in Casa'],  $matchs[$i]['Squadra in Trasferta'] ,  $matchs[$i]['Punti Casa'], $matchs[$i]['Punti Trasferta']
+                $matchs[$i]['Squadra in Casa'], ' - ',  $matchs[$i]['Squadra in Trasferta'], ' | ',  $matchs[$i]['Punti Casa'], ' - ', $matchs[$i]['Punti Trasferta']
             ?>    
 
                 
