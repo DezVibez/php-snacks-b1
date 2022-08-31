@@ -7,13 +7,41 @@ che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocci
 Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”;*/
 
 
-$take_query_name = $_GET['name'];
-$take_query_mail = $_GET['mail'];
-$take_query_age = $_GET['age'];
+$query_name = $_GET['name'];
+$query_mail = $_GET['mail'];
+$query_age = $_GET['age'];
 
-echo $take_query_name;
-echo $take_query_mail;
-echo $take_query_age;
+echo $query_name;
+echo $query_mail;
+echo $query_age;
 
+//condizioni per verifica
+
+if ((strlen($query_name) > 3) && (str_contains($query_mail, '@')) && (str_contains($query_mail, '.')))
+
+echo "Accesso riuscito";
+
+else echo "Accesso negato";
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<?php   ?>
+
+    
+</body>
+</html>
+
+
+
+
+    
 
