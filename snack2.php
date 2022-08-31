@@ -4,24 +4,22 @@
 Passare come parametri GET name, 
 mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) 
 che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. 
-Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”;*/
+Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”*/
 
 
-$query_name = $_GET['name'];
-$query_mail = $_GET['mail'];
-$query_age = $_GET['age'];
+$query_name = $_GET['name'] ?? '';
+$query_mail = $_GET['mail'] ?? '';
+$query_age = $_GET['age'] ?? '';
 
 echo $query_name;
 echo $query_mail;
 echo $query_age;
 
-//condizioni per verifica
+if (mb_strlen($query_name) > 3 && is_numeric($query_age) && strpos($query_mail, '@') && strpos($query_mail, '.') ) 
+echo 'accesso riuscito';
+else 
+echo 'accesso negato';
 
-if ((strlen($query_name) > 3) && (str_contains($query_mail, '@')) && (str_contains($query_mail, '.')))
-
-echo "Accesso riuscito";
-
-else echo "Accesso negato";
 ?>
 
 <!DOCTYPE html>
@@ -33,14 +31,9 @@ else echo "Accesso negato";
     <title>Document</title>
 </head>
 <body>
-
-<?php   ?>
-
-    
+    <h1>ciao</h1>
 </body>
 </html>
-
-
 
 
     
