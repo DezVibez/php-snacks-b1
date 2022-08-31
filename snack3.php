@@ -5,7 +5,7 @@ DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data.
 Stampare ogni data con i relativi post.
 Qui l’array di esempio: */
 
-$posts = [
+$posts_by_date = [
 
     '10-01-2019' => [
         [
@@ -45,6 +45,8 @@ $posts = [
     ],
 ];
 
+$posts_keys = array_keys($posts_by_date);
+
 ?> 
 
 <!DOCTYPE html>
@@ -58,13 +60,13 @@ $posts = [
 <body>
     
 
-    <?php  for($i = 0; $i < count($posts); $i++)  { ?>
-
+    <?php  for($i = 0; $i < count($posts_keys); $i++)  { ?>
+        $post = 
         <div>    
-            <?= $posts[$i] ?>    
+            <?= $posts_keys['text'[$i]] ?>    
         </div>
         <div>    
-           <h1> <?= $posts[$i]["text"] ?> </h1>
+        
         </div>
 
         
