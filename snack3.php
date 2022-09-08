@@ -45,7 +45,9 @@ $posts_by_date = [
     ],
 ];
 
-$posts_keys = array_keys($posts_by_date);
+$post_keys = array_keys($posts_by_date);
+
+var_dump($post_keys);
 
 ?> 
 
@@ -60,18 +62,30 @@ $posts_keys = array_keys($posts_by_date);
 <body>
     
 
-    <?php  for($i = 0; $i < count($posts_keys); $i++)  { ?>
-        $post = 
-        <div>    
-            <?= $posts_keys['text'[$i]] ?>    
-        </div>
-        <div>    
+    <?php foreach ($posts_by_date as $posts) { ?>
         
-        </div>
+            <div>    
+                <?= $posts ?>    
+            </div>
+        
+        <?php foreach ($posts as $post) { ?>
+
+            
+        
+            <div>    
+                <?= $post['title'] ?>    
+            </div>
+        
+        
+        <?php } ?>
 
         
     
 
-    <?php }     ?>
+
+        
+    
+
+    <?php } ?>
 </body>
 </html>
